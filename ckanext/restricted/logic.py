@@ -51,7 +51,7 @@ def restricted_get_restricted_dict(resource_dict):
 
         if restricted:
             restricted_level = restricted.get('level', 'public')
-            allowed_users = restricted.get('allowed_users', '')
+            allowed_users = resource_dict.get('allowed_users', '')
             if not isinstance(allowed_users, list):
                 allowed_users = allowed_users.split(',')
             restricted_dict = {
